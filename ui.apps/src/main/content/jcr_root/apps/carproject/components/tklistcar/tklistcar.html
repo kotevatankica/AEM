@@ -1,17 +1,16 @@
 <div data-sly-use.model="com.carproject.core.models.CarFilterModel">
-    <h2>Cars</h2>
-    <div data-sly-list="${model.filteredCars}">
-        <div>
+    <div  class="" data-sly-list="${model.filteredCars}">
+        <div class="c-body">
             <div>
-                <h3>${item.brand}</h3>
+                <h3 class="c-title">${item.brand}</h3>
             </div>
-            <div>
-                <p>${item.description} </p>
+            <div class="c-items">
                 <p>Car model: ${item.model} </p>
+                <p>Description: ${item.description} </p>
                 <p>Km: ${item.km} </p>
                 <p>Year: ${item.year} </p>
             </div>
-            <button> Buy</button>
+            <button class="c-button">Buy Me!</button>
         </div>
     </div>
 </div>

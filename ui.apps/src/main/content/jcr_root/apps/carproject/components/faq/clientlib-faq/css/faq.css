@@ -1,0 +1,30 @@
+.title{
+    text-align: center;
+    color: #414447;
+}
+.faq-wrapper
+{
+    background-color: #838890;
+    color: #414447;
+    text-align: center;
+
+}
+.faq-header{
+    font-size: 30px;
+    font-weight: bolder;
+    border: 2px inset #2B2D42;
+    padding: 22px;
+    cursor: pointer;
+}
+.faq-body{
+    font-size: 20px;
+    border: 2px inset #2B2D42;
+    padding: 20px;
+
+}
+.hide{
+    display: none;
+}
+.show {
+    display: block;
+}

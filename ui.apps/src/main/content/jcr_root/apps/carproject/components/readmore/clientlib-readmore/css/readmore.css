@@ -1,0 +1,28 @@
+.inner {
+    font-size: 22px;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 30px;
+}
+.l-title {
+    text-align: center;
+}
+#l-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#btn {
+    background-color: black;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+}
+#more {
+    display: none;
+}

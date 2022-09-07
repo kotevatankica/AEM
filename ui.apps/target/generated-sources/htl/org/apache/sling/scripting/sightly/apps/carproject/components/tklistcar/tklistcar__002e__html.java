@@ -34,39 +34,71 @@ public final class tklistcar__002e__html extends RenderUnit {
                                 RenderContext renderContext) {
 // Main Template Body -----------------------------------------------------------------------------
 
-Object _dynamic_model = bindings.get("model");
-Object _dynamic_item = bindings.get("item");
-out.write("<!--<div data-sly-use.model=\"com.carproject.core.models.CarFilterModel\">-->\r\n<!--    <h2>Cars</h2>-->\r\n");
+Object _global_model = null;
+Collection var_collectionvar0_list_coerced$ = null;
+_global_model = renderContext.call("use", com.carproject.core.models.CarFilterModel.class.getName(), obj());
+out.write("<div>\r\n    ");
 {
-    String var_0 = (("<!--    <div data-sly-list=\"" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_model, "filteredCars"), "comment"))) + "\">-->");
-    out.write(renderContext.getObjectModel().toString(var_0));
+    Object var_collectionvar0 = renderContext.getObjectModel().resolveProperty(_global_model, "filteredCars");
+    {
+        long var_size1 = ((var_collectionvar0_list_coerced$ == null ? (var_collectionvar0_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar0)) : var_collectionvar0_list_coerced$).size());
+        {
+            boolean var_notempty2 = (var_size1 > 0);
+            if (var_notempty2) {
+                {
+                    long var_end5 = var_size1;
+                    {
+                        boolean var_validstartstepend6 = (((0 < var_size1) && true) && (var_end5 > 0));
+                        if (var_validstartstepend6) {
+                            out.write("<div class=\"\">");
+                            if (var_collectionvar0_list_coerced$ == null) {
+                                var_collectionvar0_list_coerced$ = renderContext.getObjectModel().toCollection(var_collectionvar0);
+                            }
+                            long var_index7 = 0;
+                            for (Object item : var_collectionvar0_list_coerced$) {
+                                {
+                                    boolean var_traversal9 = (((var_index7 >= 0) && (var_index7 <= var_end5)) && true);
+                                    if (var_traversal9) {
+                                        out.write("\r\n        <div class=\"c-body\">\r\n            <div>\r\n                <h3 class=\"c-title\">");
+                                        {
+                                            Object var_10 = renderContext.call("xss", renderContext.getObjectModel().resolveProperty(item, "brand"), "text");
+                                            out.write(renderContext.getObjectModel().toString(var_10));
+                                        }
+                                        out.write("</h3>\r\n            </div>\r\n            <div class=\"c-items\">\r\n                <p>");
+                                        {
+                                            String var_11 = (("Car model: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(item, "model"), "text"))) + " ");
+                                            out.write(renderContext.getObjectModel().toString(var_11));
+                                        }
+                                        out.write("</p>\r\n                <p>");
+                                        {
+                                            String var_12 = (("Description: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(item, "description"), "text"))) + " ");
+                                            out.write(renderContext.getObjectModel().toString(var_12));
+                                        }
+                                        out.write("</p>\r\n                <p>");
+                                        {
+                                            String var_13 = (("Km: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(item, "km"), "text"))) + " ");
+                                            out.write(renderContext.getObjectModel().toString(var_13));
+                                        }
+                                        out.write("</p>\r\n                <p>");
+                                        {
+                                            String var_14 = (("Year: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(item, "year"), "text"))) + " ");
+                                            out.write(renderContext.getObjectModel().toString(var_14));
+                                        }
+                                        out.write("</p>\r\n            </div>\r\n            <button class=\"c-button\">Buy Me!</button>\r\n        </div>\r\n    ");
+                                    }
+                                }
+                                var_index7++;
+                            }
+                            out.write("</div>");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    var_collectionvar0_list_coerced$ = null;
 }
-out.write("\r\n<!--        <div>-->\r\n<!--            <div>-->\r\n");
-{
-    String var_1 = (("<!--                <h3>" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "brand"), "comment"))) + "</h3>-->");
-    out.write(renderContext.getObjectModel().toString(var_1));
-}
-out.write("\r\n<!--            </div>-->\r\n<!--            <div>-->\r\n");
-{
-    String var_2 = (("<!--                <p>" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "description"), "comment"))) + " </p>-->");
-    out.write(renderContext.getObjectModel().toString(var_2));
-}
-out.write("\r\n");
-{
-    String var_3 = (("<!--                <p>Model: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "model"), "comment"))) + " </p>-->");
-    out.write(renderContext.getObjectModel().toString(var_3));
-}
-out.write("\r\n");
-{
-    String var_4 = (("<!--                <p>Kmj: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "km"), "comment"))) + " </p>-->");
-    out.write(renderContext.getObjectModel().toString(var_4));
-}
-out.write("\r\n");
-{
-    String var_5 = (("<!--                <p>Year: " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "year"), "comment"))) + " </p>-->");
-    out.write(renderContext.getObjectModel().toString(var_5));
-}
-out.write("\r\n<!--            </div>-->\r\n<!--        </div>-->\r\n<!--    </div>-->\r\n<!--</div>-->\r\n<h1>Cars</h1>");
+out.write("\r\n</div>\r\n");
 
 
 // End Of Main Template Body ----------------------------------------------------------------------

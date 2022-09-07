@@ -1,0 +1,26 @@
+.imagetext {
+    background-color: #C0C9D2;
+    margin: 30px;
+}
+
+.imagetext_title
+{
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+
+.imagetext_description {
+    color: black;
+    margin: 22px;
+    font-size: 22px;
+}
+
+.imagetext img {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
